@@ -1,5 +1,4 @@
-// Required NPM modules and files.
-// ____________________________________________________________________________________
+
 
 // NPM module used to access Twitter API.
 var Twitter = require("twitter");
@@ -17,7 +16,7 @@ var request = require("request");
 var fs = require("fs");
 
 // Output file for logs.
-var filename = './log.txt';
+//var filename = './log.txt';
 
 // NPM module used for logging solution.
 var log = require('simple-node-logger').createSimpleFileLogger( filename );
@@ -25,8 +24,6 @@ var log = require('simple-node-logger').createSimpleFileLogger( filename );
 // All log information printed to log.txt.
 log.setLevel('all');
 
-// Controller and required parameters.
-// ____________________________________________________________________________________
 
 
 // Action requested.
@@ -43,11 +40,7 @@ doSomething(action, argument);
 // Switch operation used to determin which action to take.
 function doSomething(action, argument) {
 
-	/* Controls optional third argument.
-	Defines specific data relating to the action.
-	For example, when requesting song information,
-	you can pass in a song title.
-	*/ 
+	
 	argument = getThirdArgument();
 
 	switch (action) {

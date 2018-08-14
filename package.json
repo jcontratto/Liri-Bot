@@ -16,5 +16,9 @@
   "bugs": {
     "url": "https://github.com/jcontratto/Liri-Bot/issues"
   },
-  "homepage": "https://github.com/jcontratto/Liri-Bot#readme"
+  "homepage": "https://github.com/jcontratto/Liri-Bot#readme",
+  "dependencies": {
+    "dotenv": "^6.0.0",
+    "node-spotify-api": "^1.0.7"
+  }
 }

@@ -11,3 +11,14 @@ exports.spotify = {
   id: process.env.SPOTIFY_ID,
   secret: process.env.SPOTIFY_SECRET
 };
+
+/*
+exports.OMDB = {
+  OMDb API: http://www.omdbapi.com/?i=tt3896198&apikey=9bbd8320
+}
+key:  9bbd8320,
+
+*/
+exports.OMDB = {
+  id: process.env.OMDB_ID
+};
