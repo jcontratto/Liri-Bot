@@ -19,6 +19,7 @@
   "homepage": "https://github.com/jcontratto/Liri-Bot#readme",
   "dependencies": {
     "dotenv": "^6.0.0",
+    "fs": "0.0.1-security",
     "node-spotify-api": "^1.0.7",
     "request": "^2.88.0",
     "simple-node-logger": "^0.93.37",

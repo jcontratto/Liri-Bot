@@ -7,7 +7,7 @@ var Twitter = require("twitter");
 var twitterKeysFile = require("./keys.js");
 
 // NPM module used to access Spotify API.
-var spotify = require("spotify");
+var spotify = require("node-spotify-api");
 
 // NPM module used to access OMDB API.
 var request = require("request");
