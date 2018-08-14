@@ -1,4 +1,4 @@
-
+require("dotenv").config();
 
 // NPM module used to access Twitter API.
 var Twitter = require("twitter");
