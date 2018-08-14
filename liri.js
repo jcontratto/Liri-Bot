@@ -19,7 +19,7 @@ var fs = require("fs");
 //var filename = './log.txt';
 
 // NPM module used for logging solution.
-var log = require('simple-node-logger').createSimpleFileLogger( filename );
+//var log = require('simple-node-logger').createSimpleFileLogger( filename );
 
 // All log information printed to log.txt.
 log.setLevel('all');

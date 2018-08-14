@@ -1,5 +1,5 @@
 {
-  "name": "Liri-Bot",
+  "name": "liri-bot",
   "version": "1.0.0",
   "description": "Overview",
   "main": "key.js",
@@ -19,6 +19,10 @@
   "homepage": "https://github.com/jcontratto/Liri-Bot#readme",
   "dependencies": {
     "dotenv": "^6.0.0",
-    "node-spotify-api": "^1.0.7"
-  }
+    "node-spotify-api": "^1.0.7",
+    "request": "^2.88.0",
+    "simple-node-logger": "^0.93.37",
+    "twitter": "^1.7.1"
+  },
+  "devDependencies": {}
 }
