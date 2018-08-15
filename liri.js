@@ -16,7 +16,7 @@ var request = require("request");
 var fs = require("fs");
 
 // Output file for logs. cant get to work for bonus
-var filename = './log.txt';
+var filename = ('./log.txt');
 
 // NPM module used for logging solution.
 var log = require('simple-node-logger').createSimpleFileLogger( filename );
