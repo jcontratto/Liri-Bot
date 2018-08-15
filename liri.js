@@ -21,10 +21,8 @@ var fs = require("fs");
 // NPM module used for logging solution.
 var log = require('simple-node-logger').createSimpleFileLogger( filename );
 
-// All log information printed to log.txt.
+// All log information printed to log.txt., still doesnt work
 log.setLevel('all');
-
-
 
 // Action requested.
 var action = process.argv[2];
@@ -215,7 +213,7 @@ function doWhatItSays() {
 	});
 }
 
-// Logs data to the terminal and output to a text file.
+// Logs data to the terminal and output to a text file. still cant get log.text to work
 function logOutput(logText) {
 	log.info(logText);
 	console.log(logText);
