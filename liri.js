@@ -98,18 +98,21 @@ function getThirdArgument() {
 // Function to show my last 20 tweets.
 function getMyTweets() {
 	
-	var client = new Twitter(twitterKeysFile.twitterKeys);
-
-	var params = {q: '@john97301035', count: 20};
+	var client = new Twitter(twitterKeysFile.twitter);
+	//console.log(twitterKeysFile.twitter);
+	var params = {q: 'john97301035', count: 20};
 
 	client.get('search/tweets', params, function(error, tweets, response) {
 	  if (!error) {
-
+	//	console.log(tweets);
+		
 	  	for (var i = 0; i < tweets.statuses.length; i++) {
-	  		var tweetText = tweets.statuses[i].text;
+			  var tweetText = tweets.statuses[i].text;
+			  
 	  		logOutput("Tweet Text: " + tweetText);
 	  		var tweetCreationDate = tweets.statuses[i].created_at;
-	  		logOutput("Tweet Creation Date: " + tweetCreationDate);
+			  logOutput("Tweet Creation Date: " + tweetCreationDate);
+			 
 	  	}
 	  } else {
 	  	logOutput(error);
