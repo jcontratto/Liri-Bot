@@ -7,7 +7,12 @@ var Twitter = require("twitter");
 var twitterKeysFile = require("./keys.js");
 
 // NPM module used to access Spotify API.
-var spotify = require("node-spotify-api");
+var Spotify = require("node-spotify-api");
+var spotify = new Spotify ({
+	id: process.env.SPOTIFY_ID,
+	secret: process.env.SPOTIFY_SECRET
+	
+})
 
 // NPM module used to access OMDB API.
 var request = require("request");
@@ -121,8 +126,14 @@ function getMyTweets() {
 }
 
 // Calls Spotify API to retrieve song information for song title.
+
+
+
+
 function getSongInfo(songTitle) {
 
+	
+	
 	spotify.search({type: 'track', query: songTitle}, function(err, data) {
 		if (err) {
 			logOutput.error(err);
@@ -130,6 +141,9 @@ function getSongInfo(songTitle) {
 		}
 
 		
+
+
+
 		var artistsArray = data.tracks.items[0].album.artists;
 
 		// Array to hold artist names
@@ -153,7 +167,7 @@ function getSongInfo(songTitle) {
 // When no song title provided, defaults to specific song, The Sign.
 function lookupSpecificSong() {
 
-	spotify.lookup({type: 'track', id: '3DYVWvPh3kGwPasp7yjahc'}, function(err, data) {
+	spotify.request('https://api.spotify.com/v1/tracks/3DYVWvPh3kGwPasp7yjahc', function(err, data) {
 		if (err) {
 			logOutput.error(err);
 			return
@@ -170,8 +184,8 @@ function lookupSpecificSong() {
 // If no movie title provided, defaults to the movie, Mr. Nobody.
 function getMovieInfo(movieTitle) {
 
-	
-	var queryUrl = "http://www.omdbapi.com/?t=" + movieTitle + "&y=&plot=short&tomatoes=true&r=json";
+
+	var queryUrl = "http://www.omdbapi.com/?t=" + movieTitle + "&y=&plot=short&tomatoes=true&r=json&apikey=" + twitterKeysFile.OMDB.id;
 
 	//http://www.imdb.com/title/tt0485947/
 
@@ -193,6 +207,9 @@ function getMovieInfo(movieTitle) {
 	    // that always returns N/A for movie.tomatoRating.
 	    logOutput("Rotten Tomatoes Rating: " + movie.Ratings[2].Value);
 	    logOutput("Rotten Tomatoes URL: " + movie.tomatoURL);
+	  }
+	  else {
+		  console.log(error);
 	  }
 	});
 }

@@ -13,3 +13,28 @@
 22:36:26.752 INFO  Tweet Creation Date: Wed Aug 15 00:51:49 +0000 2018 
 22:39:56.996 INFO  Tweet Text: yep 
 22:39:56.996 INFO  Tweet Creation Date: Wed Aug 15 00:51:49 +0000 2018 
+18:18:23.047 INFO  Tweet Text: yep 
+18:18:23.048 INFO  Tweet Creation Date: Wed Aug 15 00:51:49 +0000 2018 
+22:36:52.091 INFO  Tweet Text: yep 
+22:36:52.091 INFO  Tweet Creation Date: Wed Aug 15 00:51:49 +0000 2018 
+22:52:56.047 INFO  Artist: Ace of Base 
+22:52:56.048 INFO  Song: The Sign 
+22:52:56.049 INFO  Spotify Preview URL: https://p.scdn.co/mp3-preview/5ca0168d6b58e0f993b2b741af90ecc7c9b16893?cid=b88043bae1784484b202635acfecd21d 
+22:52:56.050 INFO  Album Name: Greatest Hits 
+22:53:42.264 INFO  Artist(s): Lecrae 
+22:53:42.264 INFO  Song: Hammer Time 
+22:53:42.265 INFO  Spotify Preview URL: https://p.scdn.co/mp3-preview/41fdc20566f7b0eb92aaab8b019fd470beead313?cid=b88043bae1784484b202635acfecd21d 
+22:53:42.266 INFO  Album Name: All Things Work Together 
+22:56:31.021 INFO  Artist(s): MC Hammer 
+22:56:31.022 INFO  Song: One Mo' Time 
+22:56:31.022 INFO  Spotify Preview URL: https://p.scdn.co/mp3-preview/8652c628abf9f02eca9922d9e31d443b2b1562ce?cid=b88043bae1784484b202635acfecd21d 
+22:56:31.023 INFO  Album Name: The Funky Headhunter 
+23:12:53.034 INFO  Movie Title: Mr. Nobody 
+23:12:53.035 INFO  Release Year: 2009 
+23:12:53.036 INFO  IMDB Rating: 7.9 
+23:12:53.036 INFO  Country Produced In: Belgium, Germany, Canada, France, USA, UK 
+23:12:53.037 INFO  Language: English, Mohawk 
+23:12:53.037 INFO  Plot: A boy stands on a station platform as a train is about to leave. Should he go with his mother or stay with his father? Infinite possibilities arise from this decision. As long as he doesn't choose, anything is possible. 
+23:12:53.038 INFO  Actors: Jared Leto, Sarah Polley, Diane Kruger, Linh Dan Pham 
+23:12:53.039 INFO  Rotten Tomatoes Rating: 63/100 
+23:12:53.039 INFO  Rotten Tomatoes URL: http://www.rottentomatoes.com/m/mr-nobody/ 
