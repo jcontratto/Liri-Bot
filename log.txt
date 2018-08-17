@@ -38,3 +38,44 @@
 23:12:53.038 INFO  Actors: Jared Leto, Sarah Polley, Diane Kruger, Linh Dan Pham 
 23:12:53.039 INFO  Rotten Tomatoes Rating: 63/100 
 23:12:53.039 INFO  Rotten Tomatoes URL: http://www.rottentomatoes.com/m/mr-nobody/ 
+23:39:45.145 INFO  Artist(s): MC Hammer 
+23:39:45.147 INFO  Song: One Mo' Time 
+23:39:45.148 INFO  Spotify Preview URL: https://p.scdn.co/mp3-preview/8652c628abf9f02eca9922d9e31d443b2b1562ce?cid=b88043bae1784484b202635acfecd21d 
+23:39:45.149 INFO  Album Name: The Funky Headhunter 
+23:40:01.622 INFO  Artist: Ace of Base 
+23:40:01.623 INFO  Song: The Sign 
+23:40:01.624 INFO  Spotify Preview URL: https://p.scdn.co/mp3-preview/5ca0168d6b58e0f993b2b741af90ecc7c9b16893?cid=b88043bae1784484b202635acfecd21d 
+23:40:01.624 INFO  Album Name: Greatest Hits 
+23:43:56.125 INFO  Artist(s): Billy Ray Cyrus 
+23:43:56.126 INFO  Song: Achy Breaky Heart 
+23:43:56.126 INFO  Spotify Preview URL: null 
+23:43:56.127 INFO  Album Name: Some Gave All 
+23:44:32.606 INFO  Tweet Text: yep 
+23:44:32.607 INFO  Tweet Creation Date: Wed Aug 15 00:51:49 +0000 2018 
+23:45:23.551 INFO  Movie Title: Mr. Nobody 
+23:45:23.552 INFO  Release Year: 2009 
+23:45:23.552 INFO  IMDB Rating: 7.9 
+23:45:23.553 INFO  Country Produced In: Belgium, Germany, Canada, France, USA, UK 
+23:45:23.553 INFO  Language: English, Mohawk 
+23:45:23.553 INFO  Plot: A boy stands on a station platform as a train is about to leave. Should he go with his mother or stay with his father? Infinite possibilities arise from this decision. As long as he doesn't choose, anything is possible. 
+23:45:23.555 INFO  Actors: Jared Leto, Sarah Polley, Diane Kruger, Linh Dan Pham 
+23:45:23.555 INFO  Rotten Tomatoes Rating: 63/100 
+23:45:23.555 INFO  Rotten Tomatoes URL: http://www.rottentomatoes.com/m/mr-nobody/ 
+23:47:24.913 INFO  Movie Title: American Pie 
+23:47:24.915 INFO  Release Year: 1999 
+23:47:24.915 INFO  IMDB Rating: 7.0 
+23:47:24.916 INFO  Country Produced In: USA 
+23:47:24.917 INFO  Language: English 
+23:47:24.922 INFO  Plot: Four teenage boys enter a pact to lose their virginity by prom night. 
+23:47:24.923 INFO  Actors: Jason Biggs, Chris Klein, Thomas Ian Nicholas, Alyson Hannigan 
+23:47:24.923 INFO  Rotten Tomatoes Rating: 58/100 
+23:47:24.924 INFO  Rotten Tomatoes URL: http://www.rottentomatoes.com/m/american_pie/ 
+23:48:10.900 INFO  Movie Title: Who Framed Roger Rabbit 
+23:48:10.901 INFO  Release Year: 1988 
+23:48:10.901 INFO  IMDB Rating: 7.7 
+23:48:10.902 INFO  Country Produced In: USA 
+23:48:10.903 INFO  Language: English 
+23:48:10.903 INFO  Plot: A toon-hating detective is a cartoon rabbit's only hope to prove his innocence when he is accused of murder. 
+23:48:10.904 INFO  Actors: Bob Hoskins, Christopher Lloyd, Joanna Cassidy, Charles Fleischer 
+23:48:10.904 INFO  Rotten Tomatoes Rating: 83/100 
+23:48:10.905 INFO  Rotten Tomatoes URL: http://www.rottentomatoes.com/m/who_framed_roger_rabbit/ 
