@@ -8,10 +8,10 @@ var twitterKeysFile = require("./keys.js");
 
 // NPM module used to access Spotify API.
 var Spotify = require("node-spotify-api");
-var spotify = new Spotify ({
+var spotify = new Spotify({
 	id: process.env.SPOTIFY_ID,
 	secret: process.env.SPOTIFY_SECRET
-	
+
 })
 
 // NPM module used to access OMDB API.
@@ -24,7 +24,7 @@ var fs = require("fs");
 var filename = ('./log.txt');
 
 // NPM module used for logging solution.
-var log = require('simple-node-logger').createSimpleFileLogger( filename );
+var log = require('simple-node-logger').createSimpleFileLogger(filename);
 
 // All log information printed to log.txt., still doesnt work
 log.setLevel('all');
@@ -41,50 +41,49 @@ doSomething(action, argument);
 // Switch operation used to determin which action to take.
 function doSomething(action, argument) {
 
-	
 	argument = getThirdArgument();
 
 	switch (action) {
-		
+
 		// Gets list of tweets.
-		case "my-tweets": 
-		getMyTweets();
-		break;
+		case "my-tweets":
+			getMyTweets();
+			break;
 
 		// Gets song information.
 		case "spotify-this-song":
-		
-		// First gets song title argument.
-		var songTitle = argument;
 
-		// If no song title provided, defaults to specific song.
-		if (songTitle === "") {
-			lookupSpecificSong();
+			// First gets song title argument.
+			var songTitle = argument;
 
-		} else {
-			// Get song information from Spotify.
-			getSongInfo(songTitle);
-		}
-		break;
+			// If no song title provided, defaults to specific song.
+			if (songTitle === "") {
+				lookupSpecificSong();
+
+			} else {
+				// Get song information from Spotify.
+				getSongInfo(songTitle);
+			}
+			break;
 
 		// Gets movie information.
 		case "movie-this":
 
-		var movieTitle = argument;
+			var movieTitle = argument;
 
-		// If no movie title provided, defaults to specific movie.
-		if (movieTitle === "") {
-			getMovieInfo("Mr. Nobody");
+			// If no movie title provided, defaults to specific movie.
+			if (movieTitle === "") {
+				getMovieInfo("Mr. Nobody");
 
-		} else {
-			getMovieInfo(movieTitle);
-		}
-		break;
+			} else {
+				getMovieInfo(movieTitle);
+			}
+			break;
 
 		// Gets text inside file, and uses it to do something.
-		case "do-what-it-says": 
-		doWhatItSays();
-		break;
+		case "do-what-it-says":
+			doWhatItSays();
+			break;
 	}
 }
 
@@ -102,47 +101,36 @@ function getThirdArgument() {
 
 // Function to show my last 20 tweets.
 function getMyTweets() {
-	
+
 	var client = new Twitter(twitterKeysFile.twitter);
 	//console.log(twitterKeysFile.twitter);
-	var params = {q: 'john97301035', count: 20};
+	var params = { q: 'john97301035', count: 20 };
 
-	client.get('search/tweets', params, function(error, tweets, response) {
-	  if (!error) {
-	//	console.log(tweets);
-		
-	  	for (var i = 0; i < tweets.statuses.length; i++) {
-			  var tweetText = tweets.statuses[i].text;
-			  
-	  		logOutput("Tweet Text: " + tweetText);
-	  		var tweetCreationDate = tweets.statuses[i].created_at;
-			  logOutput("Tweet Creation Date: " + tweetCreationDate);
-			 
-	  	}
-	  } else {
-	  	logOutput(error);
-	  }
+	client.get('search/tweets', params, function (error, tweets, response) {
+		if (!error) {
+			//	console.log(tweets);
+
+			for (var i = 0; i < tweets.statuses.length; i++) {
+				var tweetText = tweets.statuses[i].text;
+
+				logOutput("Tweet Text: " + tweetText);
+				var tweetCreationDate = tweets.statuses[i].created_at;
+				logOutput("Tweet Creation Date: " + tweetCreationDate);
+
+			}
+		} else {
+			logOutput(error);
+		}
 	});
 }
-
 // Calls Spotify API to retrieve song information for song title.
-
-
-
-
 function getSongInfo(songTitle) {
 
-	
-	
-	spotify.search({type: 'track', query: songTitle}, function(err, data) {
+	spotify.search({ type: 'track', query: songTitle }, function (err, data) {
 		if (err) {
 			logOutput.error(err);
 			return
 		}
-
-		
-
-
 
 		var artistsArray = data.tracks.items[0].album.artists;
 
@@ -161,13 +149,13 @@ function getSongInfo(songTitle) {
 		logOutput("Spotify Preview URL: " + data.tracks.items[0].preview_url)
 		logOutput("Album Name: " + data.tracks.items[0].album.name);
 	});
-	
+
 }
 
 // When no song title provided, defaults to specific song, The Sign.
 function lookupSpecificSong() {
 
-	spotify.request('https://api.spotify.com/v1/tracks/3DYVWvPh3kGwPasp7yjahc', function(err, data) {
+	spotify.request('https://api.spotify.com/v1/tracks/3DYVWvPh3kGwPasp7yjahc', function (err, data) {
 		if (err) {
 			logOutput.error(err);
 			return
@@ -180,44 +168,41 @@ function lookupSpecificSong() {
 	});
 }
 
-
 // If no movie title provided, defaults to the movie, Mr. Nobody.
 function getMovieInfo(movieTitle) {
-
 
 	var queryUrl = "http://www.omdbapi.com/?t=" + movieTitle + "&y=&plot=short&tomatoes=true&r=json&apikey=" + twitterKeysFile.OMDB.id;
 
 	//http://www.imdb.com/title/tt0485947/
 
-	request(queryUrl, function(error, response, body) {
+	request(queryUrl, function (error, response, body) {
 
-	  if (!error && response.statusCode === 200) {
-	    
-	    
-	    var movie = JSON.parse(body);
+		if (!error && response.statusCode === 200) {
 
-	    logOutput("Movie Title: " + movie.Title);
-	    logOutput("Release Year: " + movie.Year);
-	    logOutput("IMDB Rating: " + movie.imdbRating);
-	    logOutput("Country Produced In: " + movie.Country);
-	    logOutput("Language: " + movie.Language);
-	    logOutput("Plot: " + movie.Plot);
-	    logOutput("Actors: " + movie.Actors);
+			var movie = JSON.parse(body);
 
-	    // that always returns N/A for movie.tomatoRating.
-	    logOutput("Rotten Tomatoes Rating: " + movie.Ratings[2].Value);
-	    logOutput("Rotten Tomatoes URL: " + movie.tomatoURL);
-	  }
-	  else {
-		  console.log(error);
-	  }
+			logOutput("Movie Title: " + movie.Title);
+			logOutput("Release Year: " + movie.Year);
+			logOutput("IMDB Rating: " + movie.imdbRating);
+			logOutput("Country Produced In: " + movie.Country);
+			logOutput("Language: " + movie.Language);
+			logOutput("Plot: " + movie.Plot);
+			logOutput("Actors: " + movie.Actors);
+
+			// that always returns N/A for movie.tomatoRating.
+			logOutput("Rotten Tomatoes Rating: " + movie.Ratings[2].Value);
+			logOutput("Rotten Tomatoes URL: " + movie.tomatoURL);
+		}
+		else {
+			console.log(error);
+		}
 	});
 }
 
 // Uses fs node package to take the text inside random.txt,
 function doWhatItSays() {
 
-	fs.readFile("random.txt", "utf8", function(err, data) {
+	fs.readFile("random.txt", "utf8", function (err, data) {
 		if (err) {
 			logOutput.error(err);
 		} else {
