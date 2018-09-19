@@ -79,3 +79,25 @@
 23:48:10.904 INFO  Actors: Bob Hoskins, Christopher Lloyd, Joanna Cassidy, Charles Fleischer 
 23:48:10.904 INFO  Rotten Tomatoes Rating: 83/100 
 23:48:10.905 INFO  Rotten Tomatoes URL: http://www.rottentomatoes.com/m/who_framed_roger_rabbit/ 
+09:26:56.821 INFO  Movie Title: Who Framed Roger Rabbit 
+09:26:56.823 INFO  Release Year: 1988 
+09:26:56.823 INFO  IMDB Rating: 7.7 
+09:26:56.823 INFO  Country Produced In: USA 
+09:26:56.823 INFO  Language: English 
+09:26:56.823 INFO  Plot: A toon-hating detective is a cartoon rabbit's only hope to prove his innocence when he is accused of murder. 
+09:26:56.824 INFO  Actors: Bob Hoskins, Christopher Lloyd, Joanna Cassidy, Charles Fleischer 
+09:26:56.826 INFO  Rotten Tomatoes Rating: 83/100 
+09:26:56.832 INFO  Rotten Tomatoes URL: http://www.rottentomatoes.com/m/who_framed_roger_rabbit/ 
+09:27:08.908 INFO  Movie Title: American Pie 
+09:27:08.909 INFO  Release Year: 1999 
+09:27:08.909 INFO  IMDB Rating: 7.0 
+09:27:08.909 INFO  Country Produced In: USA 
+09:27:08.909 INFO  Language: English 
+09:27:08.910 INFO  Plot: Four teenage boys enter a pact to lose their virginity by prom night. 
+09:27:08.910 INFO  Actors: Jason Biggs, Chris Klein, Thomas Ian Nicholas, Alyson Hannigan 
+09:27:08.910 INFO  Rotten Tomatoes Rating: 58/100 
+09:27:08.910 INFO  Rotten Tomatoes URL: http://www.rottentomatoes.com/m/american_pie/ 
+09:27:42.696 INFO  Artist: Ace of Base 
+09:27:42.698 INFO  Song: The Sign 
+09:27:42.698 INFO  Spotify Preview URL: https://p.scdn.co/mp3-preview/5ca0168d6b58e0f993b2b741af90ecc7c9b16893?cid=b88043bae1784484b202635acfecd21d 
+09:27:42.699 INFO  Album Name: Greatest Hits 

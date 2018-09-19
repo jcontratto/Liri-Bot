@@ -188,10 +188,6 @@ function getMovieInfo(movieTitle) {
 			logOutput("Language: " + movie.Language);
 			logOutput("Plot: " + movie.Plot);
 			logOutput("Actors: " + movie.Actors);
-
-			// that always returns N/A for movie.tomatoRating.
-			logOutput("Rotten Tomatoes Rating: " + movie.Ratings[2].Value);
-			logOutput("Rotten Tomatoes URL: " + movie.tomatoURL);
 		}
 		else {
 			console.log(error);
